@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>eTime</title>
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="css/ios_icons.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body class="layout-white">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover layout-white">
+        <div class="close-x">
+            <a href="#" class="close-panel icon-only"> <i class="f7-icons color-blue ">close</i> </a>
+        </div>
+        <div class="content-block-title" style="text-transform:none">Etime Register</div>
+        <div class="content-block"><p>Version 1.0 </p></div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class-->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner navbar-innerCSS">
+                    <div class="left">
+                        <a href="#" class="open-panel link icon-only"> <i class="f7-icons text-blue-voith">bars</i> </a>
+                    </div>
+                    <div class="navbar-on-left">eTime Registor</div>
+                    <div class="right"><em class="f7-icons logo-size">v_logo</em></div>
+                </div>
+            </div>
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Index Page-->
+                <div data-page="index" class="page">
+                    <div class="page-content">
+                        <div class="container">
+                            <img src="img/vs_header.png" style="width: 100%; height: 100%;" />
+                        </div>
+                        <div class="content-block-title" style="text-transform:none">Welcome To eTime Registor</div>
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                                <p>Increasing global IT services with complex structures require a common repository to support the demands of Global IT Operations. Goal of the project is to develop one global platform for Voith Digital Solutions.</p>
+                            </div>
+                        </div>
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <span class="tabbar-label">Mark attendence</span>
+                                    <br />
+
+                                    <img id="startCameraAboveButton" src="img/Camera-WF1.png" style="height:auto" />
+                                    <img id="switchCameraButton" src="img/CamRT.png" style="height:auto" />
+                                    <img id="takePictureButton" src="img/clickCam.png" style="height:auto" />
+                                    <img id="stopCameraButton" src="img/closeCam.png" style="height:auto" />
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="pictures">
+                            <p><img id="originalPicture" width="200" /></p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar tabbar">
+                <div class="toolbar-inner">
+                    <a href="#" id="home" onclick="OpenHomePage()" class="tab-link active">
+                        <i class=" f7-icons ">home</i>
+                        <span class="tabbar-label">Home</span>
+                    </a>
+                    <a href="#" id="attendence" onclick="OpenAttendencePage()" class="tab-link ">
+                        <i class=" f7-icons  ">alarm</i>
+                        <span class="tabbar-label">Attendence</span>
+                    </a>
+                    <a href="#" id="leave" onclick="OpenLeavePage()" class="tab-link">
+                        <i class=" f7-icons">persons</i>
+                        <span class="tabbar-label">Leave</span>
+                    </a>
+                    <a href="#" id="discreancy" onclick="OpenDiscrepancyPage()" class="tab-link">
+                        <i class=" f7-icons">info_round</i>
+                        <span class="tabbar-label">Discrepancy</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="barcodescanner.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="CameraPreview.js"></script>
+    <!--<script type="text/javascript"> var myswiper = myApp.swiper('.swiper-container', { pagination: '.swiper-pagination'}); </script>-->
+</body>
+</html>
